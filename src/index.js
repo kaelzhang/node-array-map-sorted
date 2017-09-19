@@ -1,4 +1,4 @@
-export default (array, relative, mapper) => {
+export default (array, relative, mapper, defaultValue) => {
   let matchedIndex = -1
 
   return array.map((datum, index) => {
@@ -13,5 +13,7 @@ export default (array, relative, mapper) => {
         return rel
       }
     }
+
+    return defaultValue
   })
 }

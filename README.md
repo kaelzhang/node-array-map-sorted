@@ -44,6 +44,10 @@ map(
 // [4, undefined, 9]
 ```
 
+## map(array, relative, mapper, defaultValue = 1)
+
+Returns `Array`
+
 ## License
 
 MIT
