@@ -15,7 +15,7 @@
 
 # array-map-sorted
 
-<!-- description -->
+Compare two sorted arrays, and map the items of the first map to matched ones.
 
 ## Install
 
@@ -26,7 +26,22 @@ $ npm install array-map-sorted
 ## Usage
 
 ```js
-import array_map_sorted from 'array-map-sorted'
+import map from 'array-map-sorted'
+
+map(
+  [
+    // 1 matches 4
+    1,
+    // 2 starts to match from 5 (4 has already been matched), and no matches
+    2,
+    // 3 starts to match from 5, and matches 9
+    3
+  ],
+  [4, 5, 7, 9],
+  (a, b) => b % a === 0
+)
+
+// [4, undefined, 9]
 ```
 
 ## License
