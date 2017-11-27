@@ -1,7 +1,7 @@
 {
   "name": "array-map-sorted",
-  "version": "1.2.0",
-  "description": "array-map-sorted",
+  "version": "1.2.1",
+  "description": "Compare two sorted arrays, and map the items of the first map to matched ones.",
   "main": "lib/index.js",
   "module": "src/index.js",
   "scripts": {
@@ -19,7 +19,10 @@
     "url": "git://github.com/kaelzhang/node-array-map-sorted.git"
   },
   "keywords": [
-    "array-map-sorted"
+    "array-map-sorted",
+    "array",
+    "match",
+    "compare"
   ],
   "engines": {
     "node": ">=4"
