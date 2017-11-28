@@ -28,7 +28,7 @@ $ npm install array-map-sorted
 ```js
 import map from 'array-map-sorted'
 
-map(
+const args = [
   [
     // 1 matches 4
     1,
@@ -39,12 +39,19 @@ map(
   ],
   [4, 5, 7, 9],
   (a, b) => b % a === 0
-)
+]
 
+map(...args)
 // [4, undefined, 9]
+
+map(...args, 0)
+// [4, 0, 9]
+
+map(...args, 0, (datum, rel) => datum + rel)
+// [5, 0, 12]
 ```
 
-## map(array, relative, mapper, defaultValue = 1)
+## map(data, relative, matcher, defaultValue = undefined, mapper)
 
 Returns `Array`
 

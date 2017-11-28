@@ -1,6 +1,6 @@
 {
   "name": "array-map-sorted",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "Compare two sorted arrays, and map the items of the first map to matched ones.",
   "main": "lib/index.js",
   "module": "src/index.js",
@@ -58,8 +58,5 @@
     "rollup": "^0.49.3",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-node-resolve": "^3.0.0"
-  },
-  "dependencies": {
-    "babel-runtime": "^6.23.0"
   }
 }

@@ -1,16 +1,18 @@
-export default (array, relative, mapper, defaultValue) => {
+const returnRel = (datum, rel) => rel
+
+export default (array, relative, matcher, defaultValue, mapper = returnRel) => {
   let matchedIndex = -1
 
   return array.map((datum, index) => {
     let i = matchedIndex + 1
-    let length = relative.length
     let rel
+    const length = relative.length
 
     for (; i < length; i ++) {
       rel = relative[i]
-      if (mapper(datum, rel, index, i)) {
+      if (matcher(datum, rel, index, i)) {
         matchedIndex = i
-        return rel
+        return mapper(datum, rel)
       }
     }
 
