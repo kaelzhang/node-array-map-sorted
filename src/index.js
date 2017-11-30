@@ -12,7 +12,7 @@ export default (array, relative, matcher, defaultValue, mapper = returnRel) => {
       rel = relative[i]
       if (matcher(datum, rel, index, i)) {
         matchedIndex = i
-        return mapper(datum, rel)
+        return mapper(datum, rel, index, i)
       }
     }
 

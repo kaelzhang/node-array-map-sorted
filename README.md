@@ -53,6 +53,12 @@ map(...args, 0, (datum, rel) => datum + rel)
 
 ## map(data, relative, matcher, defaultValue = undefined, mapper)
 
+- **data** `Array<datum>` the array to be mapped
+- **relative** `Array<rel>` which each datum of `data` will be matched with.
+- **matcher** `function(datum, rel, datum_i, rel_i): boolean` the matcher function
+- **defaultValue** `any=undefined` if there is no match, the datum will be mapped to `defaultValue`
+- **mapper** `function(datum, rel, datum_i, rel_i): any` if there is a match, `mapper` returns the value which the datum to be mapped into. By default, `mapper` is `(datum, rel) => rel`.
+
 Returns `Array`
 
 ## License
